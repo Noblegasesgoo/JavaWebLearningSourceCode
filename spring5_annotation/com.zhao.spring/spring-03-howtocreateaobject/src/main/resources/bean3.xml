@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用spring来创建我们的对象，spring中对象都为bean
+       bean就相当于一个对象。
+
+       这里的id相当于对象名。
+       这里的class就是你要new的对象的类。
+       property相当于给对象中的属性设置一个值。
+    -->
+    <!--    <bean class="com.zhao.pojo.User" id="user">-->
+    <!--        &lt;!&ndash; 方式一：在没有无参构造的时候,可以使用下面的方法实现有参构造的参数注入，不建议使用，因为有两个参数的时候他就不好弄了 &ndash;&gt;-->
+    <!--        &lt;!&ndash; <constructor-arg type="java.lang.String" value="zlm"/> &ndash;&gt;-->
+
+    <!--        &lt;!&ndash; 方式二：建议使用如下方法 &ndash;&gt;-->
+    <!--        &lt;!&ndash; <constructor-arg index="0" value="zlm"/> &ndash;&gt;-->
+
+    <!--        &lt;!&ndash; 方式三：最直观的方法 &ndash;&gt;-->
+    <!--        <constructor-arg name="name" value="zlm"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean class="com.zhao.pojo.User2" id="user2"/>-->
+
+    <!--    <alias name="user" alias="userAlias"/>-->
+
+    <bean id="user2" class="com.zhao.pojo.User2" name="user2Alias1 user2Alias2,user2Alias3"/>
+</beans>

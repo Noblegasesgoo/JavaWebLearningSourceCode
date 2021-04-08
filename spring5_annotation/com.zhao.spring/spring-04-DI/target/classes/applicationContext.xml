@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.zhao.pojo.StudentAddress">
+        <property name="address" value="DLNU"/>
+     </bean>
+
+    <bean id="student" class="com.zhao.pojo.Student" scope="prototype">
+        <!-- 第一种注入方法：普通值的注入，用value -->
+        <property name="name">
+            <value>zlm</value>
+        </property>
+
+        <!-- 第二种注入方法：bean注入，用ref -->
+        <property name="address" ref="address"/>
+
+        <!-- 数组注入 -->
+        <property name="books">
+            <array>
+                <value>Ori</value>
+                <value>red and black</value>
+            </array>
+        </property>
+
+        <!-- List注入 -->
+        <property name="hobbies">
+            <list>
+                <value>singing</value>
+                <value>sleeping</value>
+                <value>eating</value>
+            </list>
+        </property>
+
+        <!-- Map注入 -->
+        <property name="cards">
+            <map>
+                <entry key="ID" value="1111111"/>
+                <entry key="Card" value="1234 2423"/>
+                <entry key="TEL" value="12312412124"/>
+            </map>
+        </property>
+
+        <!-- Set注入 -->
+        <property name="games">
+            <set>
+                <value>MHW</value>
+                <value>Mario</value>
+                <value>COD</value>
+            </set>
+        </property>
+
+        <!-- null注入 -->
+        <!-- <property name="wife" value=""/>-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!-- Properties注入 -->
+        <property name="info">
+            <props>
+                <prop key="No">2018250829</prop>
+                <prop key="Sex">M</prop>
+            </props>
+        </property>
+
+
+    </bean>
+
+</beans>

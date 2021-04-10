@@ -1,0 +1,59 @@
+2021-04-10 13:07:41.769  INFO 16028 --- [restartedMain] com.acss.AcssApplication                 : Starting AcssApplication on LAPTOP-EM069R1M with PID 16028 (D:\Project\JavaSE\accs\code\target\classes started by noblegasesgoo in D:\Project\JavaSE\accs)
+2021-04-10 13:07:41.771  INFO 16028 --- [restartedMain] com.acss.AcssApplication                 : The following profiles are active: pro
+2021-04-10 13:07:41.806  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 13:07:41.806  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 13:07:42.216  WARN 16028 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.acss]' package. Please check your configuration.
+2021-04-10 13:07:42.797  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-04-10 13:07:42.802  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 13:07:42.802  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-04-10 13:07:42.803  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-04-10 13:07:42.804  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-04-10 13:07:42.804  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-04-10 13:07:42.835  INFO 16028 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-04-10 13:07:42.883  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 13:07:42.883  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1068 ms
+2021-04-10 13:07:43.774  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 13:07:43.835  INFO 16028 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-04-10 13:07:44.153  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 13:07:44.185  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-04-10 13:07:44.192  INFO 16028 --- [restartedMain] com.acss.AcssApplication                 : Started AcssApplication in 2.631 seconds (JVM running for 3.437)
+2021-04-10 13:08:16.863  INFO 16028 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 13:08:16.863  INFO 16028 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 13:08:16.870  INFO 16028 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-04-10 13:08:16.881  INFO 16028 --- [http-nio-8084-exec-1] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:16.882  INFO 16028 --- [http-nio-8084-exec-1] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.userLoginPage', args=[]}
+2021-04-10 13:08:16.885  INFO 16028 --- [http-nio-8084-exec-1] com.acss.aspect.LogAspect                : Result : login
+2021-04-10 13:08:16.885  INFO 16028 --- [http-nio-8084-exec-1] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:21.593  INFO 16028 --- [http-nio-8084-exec-10] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:21.593  INFO 16028 --- [http-nio-8084-exec-10] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.adminLoginPage', args=[]}
+2021-04-10 13:08:21.594  INFO 16028 --- [http-nio-8084-exec-10] com.acss.aspect.LogAspect                : Result : admin/login
+2021-04-10 13:08:21.594  INFO 16028 --- [http-nio-8084-exec-10] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:22.255  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:22.256  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.userLoginPage', args=[]}
+2021-04-10 13:08:22.256  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : Result : login
+2021-04-10 13:08:22.256  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:22.758  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:22.758  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.adminLoginPage', args=[]}
+2021-04-10 13:08:22.758  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : Result : admin/login
+2021-04-10 13:08:22.759  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:23.466  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:23.466  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.userLoginPage', args=[]}
+2021-04-10 13:08:23.466  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : Result : login
+2021-04-10 13:08:23.466  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:24.545  INFO 16028 --- [http-nio-8084-exec-9] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:24.545  INFO 16028 --- [http-nio-8084-exec-9] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.adminLoginPage', args=[]}
+2021-04-10 13:08:24.545  INFO 16028 --- [http-nio-8084-exec-9] com.acss.aspect.LogAspect                : Result : admin/login
+2021-04-10 13:08:24.546  INFO 16028 --- [http-nio-8084-exec-9] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:25.061  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:25.062  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.userLoginPage', args=[]}
+2021-04-10 13:08:25.062  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : Result : login
+2021-04-10 13:08:25.062  INFO 16028 --- [http-nio-8084-exec-8] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:31.217  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:31.218  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.adminLoginPage', args=[]}
+2021-04-10 13:08:31.218  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : Result : admin/login
+2021-04-10 13:08:31.218  INFO 16028 --- [http-nio-8084-exec-3] com.acss.aspect.LogAspect                : -----doAfter-----
+2021-04-10 13:08:46.235  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : -----doBefore-----
+2021-04-10 13:08:46.235  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : Request : ReqeustLog{url='http://localhost:8084/admin/login', ip='0:0:0:0:0:0:0:1', classMethod='com.acss.controller.LoginController.adminLogin', args=[User(id=null, username=2018081504, password=123456, avatar=null, realname=null, email=null, phone=null, roleId=null, describes=null, professionId=null, collegeId=null, deleted=null), {user=User(id=null, username=2018081504, password=123456, avatar=null, realname=null, email=null, phone=null, roleId=null, describes=null, professionId=null, collegeId=null, deleted=null), org.springframework.validation.BindingResult.user=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, org.apache.catalina.session.StandardSessionFacade@1b2422fc]}
+2021-04-10 13:08:46.293  INFO 16028 --- [http-nio-8084-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-04-10 13:08:50.766  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : Result : redirect:/admin/index
+2021-04-10 13:08:50.766  INFO 16028 --- [http-nio-8084-exec-7] com.acss.aspect.LogAspect                : -----doAfter-----

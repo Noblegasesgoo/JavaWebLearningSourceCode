@@ -1,0 +1,115 @@
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1de5f259] was not registered for synchronization because synchronization is not active
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29ca3d04] will not be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==>  Preparing: select * from `mybatis`.`user`;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==> Parameters: 
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]<==      Total: 8
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1de5f259]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1de5f259] was not registered for synchronization because synchronization is not active
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29ca3d04] will not be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==>  Preparing: select * from `mybatis`.`user`;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==> Parameters: 
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]<==      Total: 8
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1de5f259]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e1a0406] was not registered for synchronization because synchronization is not active
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1a20270e] will not be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==>  Preparing: insert into `mybatis`.`user` (`id`, `name`, `pwd`) values (?, ?, ?);
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==> Parameters: 20(Integer), kjb(String), 1234124(String)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e1a0406]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34f22f9d] was not registered for synchronization because synchronization is not active
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7dda48d9] will not be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: deletes from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34f22f9d]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e1a0406] was not registered for synchronization because synchronization is not active
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1a20270e] will not be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: delete from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e1a0406]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75b25825] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==>  Preparing: insert into `mybatis`.`user` (`id`, `name`, `pwd`) values (?, ?, ?);
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==> Parameters: 20(Integer), kjb(String), 21142(String)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75b25825] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: delete from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75b25825] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==>  Preparing: insert into `mybatis`.`user` (`id`, `name`, `pwd`) values (?, ?, ?);
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==> Parameters: 20(Integer), kjb(String), 21142(String)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7756c3cd]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2bd2b28e] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: deletes from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7756c3cd]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7756c3cd]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7756c3cd]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75b25825] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: delete from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@75b25825] will be managed by Spring
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==>  Preparing: insert into `mybatis`.`user` (`id`, `name`, `pwd`) values (?, ?, ?);
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]==> Parameters: 20(Integer), kjb(String), 21142(String)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.addUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d] from current transaction
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==>  Preparing: delete from `mybatis`.`user` where `id`=?;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]==> Parameters: 20(Integer)
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.deleteUser]<==    Updates: 1
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d] from current transaction
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==>  Preparing: select * from `mybatis`.`user`;
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]==> Parameters: 
+[DEBUG][21-04-14[com.zhao.mapper.UserMapper.getUsers]<==      Total: 8
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]
+[DEBUG][21-04-14[org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66b7550d]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 方式三:注解实现aop -->
+    <!-- 注册bean -->
+
+    <!-- 提供注解支持 -->
+    <context:annotation-config/>
+    <!-- 扫描指定包下的注解 -->
+<!--    <context:component-scan base-package="com.zhao.service"/>-->
+<!--    <context:component-scan base-package="com.zhao.diy"/>-->
+
+    <!-- 开启注解支持 -->
+    <aop:aspectj-autoproxy/>
+
+    <!-- 第一步：  配置数据源（DataSources）
+        将mybatis的配置替换为spring的数据源：c3p0 dbcp ...
+    -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="mysql123456"/>
+    </bean>
+
+    <!-- 第二步：  注册SqlSessionFactory对象 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+
+        <!-- 绑定mybatis配置文件:
+                此时mybatis就和spring连起来了，我们可以去mybatis-config.xml文件中去拓展功能。
+         -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:com/zhao/mapper/UserMapper.xml"/>
+    </bean>
+
+    <!-- *** 如果用了SqlSessionDaoSupport类实现整合的话，可以省略第三步 ***-->
+    <!-- 第三步：  创建等效于我们原来的sqlSessionFactory对象的另一个spring提供的类 -->
+    <!-- SqlSessionTemplate类就是我们原来的SqlSessionFactory -->
+    <bean id="sqlSessionTemp" class="org.mybatis.spring.SqlSessionTemplate">
+        <!-- 只能使用构造器注入，因为没有set方法 -->
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+    <!-- 第四步:  见applicationConfig.xml -->
+
+</beans>

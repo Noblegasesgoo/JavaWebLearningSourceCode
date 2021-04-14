@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 使用日志工厂 -->
+    <settings>
+        <!-- 标准的日志工厂的使用 -->
+        <!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!-- 为一些实体类写别名 -->
+    <typeAliases>
+        <typeAlias type="com.zhao.pojo.User"/>
+        <!-- <package name="com.zhao.pojo"/> 这样的，他会自动扫描符合的javabean，并且会以该bean的首字母小写名称来起该bean的名称
+            你可以在实体类上运用@Alias注解来为实体类起别名，这样运用这种方式扫描到的javabean的别名就是注解中的名字了。
+        -->
+    </typeAliases>
+
+</configuration>

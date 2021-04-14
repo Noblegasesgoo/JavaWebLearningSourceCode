@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 一个命名空间（namespace）绑定一个对应的dao/mapper接口-->
+<mapper namespace="com.zhao.mapper.UserMapper">
+
+    <!-- namespace：对应java的一个DAO接口 -->
+    <!-- id：对应namespace绑定的DAO接口中的方法名称 -->
+    <!-- resultType：对应id绑定的namespace中的方法的返回值/sql语句的返回值 -->
+    <!-- select查询语句 -->
+    <select id="getUsers" resultType="com.zhao.pojo.User">
+        select * from `mybatis`.`user`;
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into `mybatis`.`user` (`id`, `name`, `pwd`) values (#{id}, #{name}, #{pwd});
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from `mybatis`.`user` where `id`=#{id};
+    </delete>
+</mapper>

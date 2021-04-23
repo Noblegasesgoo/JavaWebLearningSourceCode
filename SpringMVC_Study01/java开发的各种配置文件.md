@@ -199,7 +199,7 @@ public class MybatisUtils {
     </build>
 ```
 
-## Git的配置文件：
+## Git的过滤器配置文件：
 
 ```iml
 *.class
@@ -251,6 +251,12 @@ tem/
 ![image-20210324000710836](C:\Users\noblegasesgoo\AppData\Roaming\Typora\typora-user-images\image-20210324000710836.png)
 
 
+
+## 解决Maven导入过的包找不到的问题：
+
+```xml
+<!-- 搜索maven -> 然后importing -> 勾选source -> use JAVA_HOME -> apply-->
+```
 
 # 有关Spring5的内容
 
@@ -568,6 +574,152 @@ applicationContext.xml：
 ```
 
 
+
+# 有关SpringMVC的内容
+
+## SpringMVC要导入的包(内含servlet的包)：
+
+```xml
+       <!-- 回顾servlet所需要的依赖导入 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+```
+
+
+
+## SpringMVC的applicationContext.xml文件的基础配置模板：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+    <!-- 视图解析器：DispatcherServlet给他的ModleAndView -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <!-- 配置前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!-- 配置后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>
+```
+
+## SpringMVC的web.xml文件的基础配置模板：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- 1. 注册DispatcherServlet -->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <!-- 关联上一个springmvc的配置文件（一般命名为：name-servlet.xml）-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springmvc-servlet.xml</param-value>
+        </init-param>
+
+        <!-- 启动级别1 -->
+        <load-on-startup> 1 </load-on-startup>
+    </servlet>
+    
+    <!--
+        /* 匹配所有的请求（包括.jsp）
+        /  匹配所有的请求（不包括.jsp）
+    -->
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+## SpringMVC的applicationContext配置文件的注解开发模板：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!-- 自动扫描包，让所有指定包下的注解生效，并且由ioc容器统一管理 -->
+    <context:component-scan base-package="com.zhao.controller"/>
+
+    <!-- 设置SpringMVC不处理静态资源 -->
+    <mvc:default-servlet-handler/>
+
+    <!--
+        支持mvc注解驱动：
+            在spring中一般采用@RequestMapping注解来完成映射的关系，
+
+            要想使@RequestMapping注解生效，必须在context中注册DefaultAnnotationHandlerMapping
+            以及一个AnnotationMethodHandlerAdapter实例
+            这两个实例分别在类级别和方法级别处理。
+
+            而我们的annotation-driven配置帮助我们自动完成上述两个实例的注入。
+    -->
+    <mvc:annotation-driven/>
+
+    <!-- 视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 配置前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!-- 配置后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+</beans>
+```
 
 
 

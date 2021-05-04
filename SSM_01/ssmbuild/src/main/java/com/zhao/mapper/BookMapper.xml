@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 一个命名空间（namespace）绑定一个对应的dao/mapper接口-->
+<mapper namespace="com.zhao.mapper.BookMapper">
+
+    <!-- namespace：对应java的一个DAO接口 -->
+    <!-- id：对应namespace绑定的DAO接口中的方法名称 -->
+    <!-- resultType：对应id绑定的namespace中的方法的返回值/sql语句的返回值 -->
+    <insert id="addBooks" parameterType="Books">
+        insert into `ssmbuild`.`books` (`book_name`, `book_counts`, `detail`)
+        values (#{bookName}, #{bookCounts}, #{detail});
+    </insert>
+
+    <delete id="deleteBookById" parameterType="int">
+        delete from `ssmbuild`.`books`
+        where `book_id`=#{bookID};
+    </delete>
+
+    <update id="updateBook" parameterType="Books">
+        update `ssmbuild`.`books`
+        set `book_name`=#{bookName}, `book_counts`=#{bookCounts}, `detail`=#{detail}
+        where `book_id`=#{bookID};
+    </update>
+
+    <select id="queryBookById" resultType="Books">
+        select (`book_id`, `book_name`, `book_counts`, `detail`) from `ssmbuild`.`books`
+        where `book_id`=#{bookID};
+    </select>
+
+    <select id="queryAllBooks" resultType="Books">
+        select (`book_id`, `book_name`, `book_counts`, `detail`) from `ssmbuild`.`books`;
+    </select>
+
+</mapper>

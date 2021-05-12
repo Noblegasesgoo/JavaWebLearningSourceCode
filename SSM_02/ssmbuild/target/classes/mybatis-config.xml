@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置数据源：整合之后交给spring去做 -->
+
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!-- 起别名 -->
+    <typeAliases>
+        <package name="com.zhao.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="com/zhao/mapper/BookMapper.xml"/>
+    </mappers>
+
+</configuration>
